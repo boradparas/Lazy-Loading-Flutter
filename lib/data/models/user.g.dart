@@ -46,7 +46,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
     city: json['city'] as String,
     state: json['state'] as String,
     country: json['country'] as String,
-    postcode: json['postcode'] as int,
+    postcode: json['postcode'],
     coordinates:
         Coordinates.fromJson(json['coordinates'] as Map<String, dynamic>),
     timezone: Timezone.fromJson(json['timezone'] as Map<String, dynamic>),

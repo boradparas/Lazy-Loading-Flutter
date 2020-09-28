@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'user.g.dart';
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class User {
   User({this.results, this.info});
 
@@ -11,7 +11,7 @@ class User {
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Results {
   Results(
       {this.gender,
@@ -43,7 +43,7 @@ class Results {
       _$ResultsFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Name {
   Name({this.title, this.first, this.last});
 
@@ -53,7 +53,7 @@ class Name {
   factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Location {
   Location(
       {this.street,
@@ -67,7 +67,7 @@ class Location {
   String city;
   Coordinates coordinates;
   String country;
-  int postcode;
+  dynamic postcode;
   String state;
   Street street;
   Timezone timezone;
@@ -75,7 +75,7 @@ class Location {
       _$LocationFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Street {
   Street({this.number, this.name});
 
@@ -84,7 +84,7 @@ class Street {
   factory Street.fromJson(Map<String, dynamic> json) => _$StreetFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Coordinates {
   Coordinates({this.latitude, this.longitude});
 
@@ -94,7 +94,7 @@ class Coordinates {
       _$CoordinatesFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Timezone {
   Timezone({this.offset, this.description});
 
@@ -104,7 +104,7 @@ class Timezone {
       _$TimezoneFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Login {
   Login(
       {this.uuid,
@@ -125,7 +125,7 @@ class Login {
   factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Dob {
   Dob({this.date, this.age});
 
@@ -134,7 +134,7 @@ class Dob {
   factory Dob.fromJson(Map<String, dynamic> json) => _$DobFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Id {
   Id({this.name, this.value});
 
@@ -143,7 +143,7 @@ class Id {
   factory Id.fromJson(Map<String, dynamic> json) => _$IdFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Picture {
   Picture({this.large, this.medium, this.thumbnail});
 
@@ -154,7 +154,7 @@ class Picture {
       _$PictureFromJson(json);
 }
 
-@JsonSerializable(nullable: false, createToJson: false, createFactory: true)
+@JsonSerializable(createToJson: false)
 class Info {
   Info({this.seed, this.results, this.page, this.version});
 
